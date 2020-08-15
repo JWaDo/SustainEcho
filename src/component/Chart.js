@@ -7,7 +7,7 @@ import 'chartjs-plugin-labels';
 function Chart() {
 
     const [data, setData] = useState(config);
-    const [step, setStep] = useState(1);    
+    const [step, setStep] = useState(1);
 
     useEffect(() => {
         const currentCanva = document.getElementById("chart");
@@ -31,16 +31,15 @@ function Chart() {
                     'rgba(75, 192, 192, 0.2)',
                     'rgba(153, 102, 255, 0.2)',
                 ],  
-                borderWidth: 1
+                borderWidth: 1  
             }]
         },
         options: {
-            onClick: (event, element) => {
+            onClick: async (event, element) => {
                     if(step < 2 ) {
                         const { _index } = element[0];
-                        console.log(element[0])
-                        console.log(element)    
                         if(!!data[_index].parts) {
+                            
                             setData(data[_index].parts);
                             setStep(step + 1);
                         } 
@@ -53,6 +52,12 @@ function Chart() {
                 labels: {
                   render: ({percentage, value}) => `${percentage}% (${value}kgCO2)`
                 },
+            },
+            layout: {
+                padding: {
+                    // Any unspecified dimensions are assumed to be 0                     
+                    top: 25
+                }
             }
         }
     });
