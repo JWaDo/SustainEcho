@@ -1,14 +1,9 @@
-This project is a Todolist made by Charles Van Hame for Datadict
+OPEN EAT
 
-## Start project
+## Start the project
+- `cd SustainEcho/`
+- `npm i`
+- `npm run start`
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-Enjoy my todolist !
+### React front-end: localhost:3000
 
