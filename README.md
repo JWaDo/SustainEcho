@@ -1,4 +1,4 @@
-OPEN EAT
+SustainEcho by Charles Van Hamme
 
 ## Start the project
 - `cd SustainEcho/`
